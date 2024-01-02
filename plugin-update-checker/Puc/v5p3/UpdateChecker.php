@@ -672,11 +672,13 @@ if ( !class_exists(UpdateChecker::class, false) ):
 			if ( !empty($queryArgs) ){
 				$url = add_query_arg($queryArgs, $url);
 			}
-
 			$result = wp_remote_get($url, $options);
 
+			var_dump($result);
+			
 			$result = apply_filters($this->getUniqueName('request_metadata_http_result'), $result, $url, $options);
 			
+
 			//Try to parse the response
 			$status = $this->validateApiResponse($result);
 			$metadata = null;

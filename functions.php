@@ -9,11 +9,15 @@ if (!function_exists("blog_style")) {
     add_action('wp_enqueue_scripts','blog_style');
 }
 
+
 require 'plugin-update-checker/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/user-name/repo-name/',
+	'https://github.com/kusenabdullah-123/blogs-theme',
 	__FILE__,
-	'unique-plugin-or-theme-slug'
+	'blogs-theme'
 );
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
