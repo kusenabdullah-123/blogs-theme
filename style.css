@@ -4,7 +4,7 @@ Theme URI: https://kusenadev.my.id
 Author: the KusenaDev team
 Author URI: https://kusenadev.my.id
 Description: Blog theme for public resource
-Version: 1.0
+Version: 1.2
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.0
@@ -14,3 +14,8 @@ Text Domain: Blog Theme
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */html,body{padding:0;margin:0}
+
+html {
+    background-color: red;
+    color: black;
+}
